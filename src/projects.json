@@ -1,0 +1,14 @@
+[
+  {
+    "imgLink": "site.png",
+    "text": "This website",
+    "link": "/",
+    "external": false
+  },
+  {
+    "imgLink": "npmcard.png",
+    "text": "Business card",
+    "link": "https://github.com/carlobolla/npmcard",
+    "external": true
+  }
+]
