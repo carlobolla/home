@@ -3,7 +3,7 @@ import { Contact, ThemeContext } from "../classes";
 
 export const ContactInfo = (props: Contact) => {
   const [isHovering, setIsHovering] = useState(false);
-  const {theme, setTheme} = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
 
   const handleMouseEnter = () => {
     setIsHovering(true);

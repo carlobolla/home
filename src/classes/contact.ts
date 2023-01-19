@@ -1,5 +1,3 @@
-import { MouseEventHandler } from "react";
-
 export interface Contact {
   icon: string,
   color: string,
