@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../classes";
+import { ThemeContext } from ".";
 
 export const ThemeSwitcher = () => {
     const {theme, setTheme} = useContext(ThemeContext)

@@ -1,29 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { ThemeContext } from "../classes";
+import { ThemeContext } from ".";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 export function ThemeProvider(props: any) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'auto');
+    const isTheme = useMediaQuery('(prefers-color-scheme: dark)')
     useEffect(() => {
         localStorage.setItem('theme', theme);
-        if(theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches){
-            document.documentElement.setAttribute('data-bs-theme', 'dark');
+        if(theme === 'auto'){
+            document.documentElement.setAttribute('data-bs-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         } else {
             document.documentElement.setAttribute('data-bs-theme', theme);
         }
-    }, [theme]);
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handler = (e: MediaQueryListEvent) => {
-            if(theme === 'auto'){
-                if(e.matches){
-                    document.documentElement.setAttribute('data-bs-theme', 'dark');
-                } else {
-                    document.documentElement.setAttribute('data-bs-theme', 'light');
-                }
-            }
-        }
-        mediaQuery.addEventListener('change', handler);
-        return () => mediaQuery.removeEventListener('change', handler);
-    }, [theme]);
+    }, [theme, isTheme]);
     return <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>{props.children}</ThemeContext.Provider>;
 }

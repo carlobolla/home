@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
-import { Contact, ThemeContext } from "../classes";
+import { Contact } from "../classes";
+import { ThemeContext } from ".";
 
 export const ContactInfo = (props: Contact) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -12,16 +13,22 @@ export const ContactInfo = (props: Contact) => {
   const handleMouseLeave = () => {
     setIsHovering(false);
   };
+
+  const getActualTheme = (theme: string): string => {
+    if(theme === 'auto')
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return theme;
+  }
   
   return(
     <a href={props.link}
       className='btn p-1 rounded-pill justify-content-center align-items-center d-flex'
       style={{ 
-        borderColor: (theme === 'light' ? props.color : props.colorDark),
+        borderColor: (getActualTheme(theme) === 'light' ? props.color : props.colorDark),
         borderStyle: 'solid',
         borderWidth: '1px',
-        color: isHovering ? (theme === 'light' ? "white" : props.textDark) : (theme === 'light' ? props.color : props.colorDark),
-        backgroundColor: isHovering ? (theme === 'light' ? props.color : props.colorDark) : '',
+        color: isHovering ? (getActualTheme(theme) === 'light' ? "white" : props.textDark) : (getActualTheme(theme) === 'light' ? props.color : props.colorDark),
+        backgroundColor: isHovering ? (getActualTheme(theme) === 'light' ? props.color : props.colorDark) : '',
         transition: 'background-color 100ms, color 100ms'
       }}
       onMouseEnter={handleMouseEnter}
