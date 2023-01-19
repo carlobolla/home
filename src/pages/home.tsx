@@ -57,7 +57,7 @@ export const Home = () => {
             {contacts.map((c: Contact) => {
               return (
                 <div key={c.text} className="col-6 col-sm-4 col-lg-2">
-                  <ContactInfo link={c.link} icon={c.icon} text={c.text} color={c.color} onclick={c.onclick}></ContactInfo>
+                  <ContactInfo link={c.link} icon={c.icon} text={c.text} color={c.color} colorDark={c.colorDark ?? c.color} textDark={c.textDark ?? "#ffffff"}></ContactInfo>
                 </div>
               )
             })}
