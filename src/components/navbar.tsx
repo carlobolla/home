@@ -1,8 +1,10 @@
 import React from "react";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export const Navbar = () => {
+  
   return(
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg bg-body-secondary">
       <div className="container-fluid">
         <a className="ms-2 navbar-brand d-flex align-items-center" style={{color: '#7F7FD5'}} href="/">
           <img src="/logo.svg" alt="Logo" width="30" height="24" />
@@ -15,6 +17,7 @@ export const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
+            <ThemeSwitcher />
           </ul>
         </div>
       </div>

@@ -3,7 +3,9 @@
     "link":"https://github.com/carlobolla",
     "icon":"bi-github",
     "text":"Github",
-    "color":"#211f1f"
+    "color":"#211f1f",
+    "colorDark": "#ffffff",
+    "textDark": "#000000"
   },
   {
     "link":"https://it.linkedin.com/in/carlo-bollini/",

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Contact } from "../classes";
+import React, { useContext, useState } from "react";
+import { Contact, ThemeContext } from "../classes";
 
 export const ContactInfo = (props: Contact) => {
   const [isHovering, setIsHovering] = useState(false);
+  const {theme} = useContext(ThemeContext);
 
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -16,11 +17,11 @@ export const ContactInfo = (props: Contact) => {
     <a href={props.link}
       className='btn p-1 rounded-pill justify-content-center align-items-center d-flex'
       style={{ 
-        borderColor: props.color,
+        borderColor: (theme === 'light' ? props.color : props.colorDark),
         borderStyle: 'solid',
         borderWidth: '1px',
-        color: isHovering ? 'white' : props.color,
-        backgroundColor: isHovering ? props.color : 'white',
+        color: isHovering ? (theme === 'light' ? "white" : props.textDark) : (theme === 'light' ? props.color : props.colorDark),
+        backgroundColor: isHovering ? (theme === 'light' ? props.color : props.colorDark) : '',
         transition: 'background-color 100ms, color 100ms'
       }}
       onMouseEnter={handleMouseEnter}
