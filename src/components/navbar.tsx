@@ -17,8 +17,6 @@ export const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
-          </ul>
-          <ul className="navbar-nav mb-2 mb-lg-0">
             <ThemeSwitcher />
           </ul>
         </div>

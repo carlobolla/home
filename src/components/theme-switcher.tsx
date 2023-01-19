@@ -18,8 +18,8 @@ export const ThemeSwitcher = () => {
         }
     }, [theme]);
     return(
-        <li className="nav-item dropstart">
-            <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"><i className={themeIcon}></i></div>
+        <li className="nav-item dropdown">
+            <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Theme <i className={themeIcon}></i></div>
             <ul className="dropdown-menu">
                 <li><div role="button" onClick={() => setTheme("light")} className={theme === "light" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-brightness-high-fill"></i> Light</div></li>
                 <li><div role="button" onClick={() => setTheme("dark")} className={theme === "dark" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-moon-stars-fill"></i> Dark</div></li>
