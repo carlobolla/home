@@ -19,13 +19,13 @@ export const ThemeSwitcher = () => {
     }, [theme]);
     return(
         <li className="nav-item dropstart">
-            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+            <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
             <i className={themeIcon}></i>
             </a>
             <ul className="dropdown-menu">
-            <li><a role="button" onClick={() => setTheme("light")} className={theme === "light" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-brightness-high-fill"></i> Light</a></li>
-            <li><a role="button" onClick={() => setTheme("dark")} className={theme === "dark" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-moon-stars-fill"></i> Dark</a></li>
-            <li><a role="button" onClick={() => setTheme("auto")} className={theme === "auto" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-circle-half"></i> Auto</a></li>
+            <li><a role="button" href="#" onClick={() => setTheme("light")} className={theme === "light" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-brightness-high-fill"></i> Light</a></li>
+            <li><a role="button" href="#" onClick={() => setTheme("dark")} className={theme === "dark" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-moon-stars-fill"></i> Dark</a></li>
+            <li><a role="button" href="#" onClick={() => setTheme("auto")} className={theme === "auto" ? "dropdown-item active" : "dropdown-item"}><i className="bi bi-circle-half"></i> Auto</a></li>
             </ul>
         </li>
     )

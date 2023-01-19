@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ThemeContext } from "../classes";
 
-const themeReducer = (action: string) => {
-    if(action === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches){
-         document.documentElement.setAttribute('data-bs-theme', 'dark');
-         return 'dark';
-    } else {
-        document.documentElement.setAttribute('data-bs-theme', action);
-        return action;
-    }
-}
-
 export function ThemeProvider(props: any) {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'auto');
     useEffect(() => {
