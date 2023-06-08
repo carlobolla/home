@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "./";
 
-const ThemeSwitcher = () => {
+export const ThemeSwitcher = () => {
     const LIGHT_ICON = "bi bi-brightness-high-fill"
     const DARK_ICON = "bi bi-moon-stars-fill"
     const SYSTEM_ICON = "bi bi-circle-half"
@@ -31,5 +31,3 @@ const ThemeSwitcher = () => {
         </div>
     )
 }
-
-export default ThemeSwitcher
