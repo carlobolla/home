@@ -17,7 +17,7 @@ export const Navbar = () => {
               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Blog</a>
+              <a className="nav-link" aria-current="page" href="https://blog.carlobollini.com">Blog</a>
             </li>
           </ul>
         </div>
