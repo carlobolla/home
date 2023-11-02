@@ -64,7 +64,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="container">
-          <p className='text-center text-muted'>Built with 💚 using <a href="https://vitejs.dev/" className="text-muted">Vite</a>, <a className="text-muted" href="https://reactjs.org/">React</a> and <a className="text-muted" href="https://getbootstrap.com/">Bootstrap</a> - © 2022</p>
+          <p className='text-center text-muted'>Built with 💚 using <a href="https://vitejs.dev/" className="text-muted">Vite</a>, <a className="text-muted" href="https://reactjs.org/">React</a> and <a className="text-muted" href="https://getbootstrap.com/">Bootstrap</a> - © 2022-2024</p>
         </div>
       </div>
     </>
