@@ -14,7 +14,7 @@ export const Home = () => {
             <img src="propic.jpg" alt="propic" className='img-thumbnail rounded-circle' />
           </div>
           <div className='col-8 col-md-8 col-lg-9 col-xl-10 justify-content-center d-flex flex-column'>
-            <h1 className="display-1">Hello, world!</h1>
+            <h1 className="display-1 gradient-text">Hello, world!</h1>
             <h2>My name is <strong style={{ color: '#86A8E7' }}>Carlo</strong></h2>
             <p>
               I'm a fullstack developer living and working in Italy! 🇮🇹
@@ -22,10 +22,11 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className='container'>
+      <div id="projects" className='container'>
         <div className="row">
           <div className="col text-center">
             <h1>My projects</h1>
+            <p className="text-muted">Things I've built recently</p>
           </div>
         </div>
         <hr />
@@ -46,14 +47,15 @@ export const Home = () => {
               null
           }
         </div>
-        <div className='container'>
+        <div id="contacts" className='container'>
           <div className="row">
             <div className="col text-center">
               <h1>My contacts</h1>
+              <p className="text-muted">Where to find me online</p>
             </div>
           </div>
           <hr />
-          <div className="row gy-3 mb-5">
+          <div className="row gy-3 mb-5 justify-content-center">
             {contacts.map((c: Contact) => {
               return (
                 <div key={c.text} className="col-6 col-sm-4 col-lg-2">

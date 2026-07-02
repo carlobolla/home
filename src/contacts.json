@@ -20,6 +20,12 @@
     "color":"#0088cc"
   },
   {
+    "link":"https://t.me/carlobollaslife",
+    "icon":"bi-telegram",
+    "text":"Telegram Channel",
+    "color":"#0088cc"
+  },
+  {
     "link":"https://discordapp.com/users/153883690336780288",
     "icon":"bi-discord",
     "text":"Discord",
@@ -32,9 +38,9 @@
     "color":"#e1306c"
   },
   {
-    "link":"https://twitter.com/carlobolla",
-    "icon":"bi-twitter",
-    "text":"Twitter",
+    "link":"https://bsky.app/profile/crlb.dev",
+    "icon":"bi-bluesky",
+    "text":"Bluesky",
     "color":"#55acee"
   }
 ]

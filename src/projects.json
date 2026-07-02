@@ -1,14 +1,14 @@
 [
   {
-    "imgLink": "site.png",
-    "text": "This website",
-    "link": "/",
-    "external": false
+    "imgLink": "anomalypredictions.png",
+    "text": "Ingress Anomaly Score Predictor",
+    "link": "https://anomalypredictions.crlb.dev",
+    "external": true
   },
   {
-    "imgLink": "npmcard.png",
-    "text": "Business card",
-    "link": "https://github.com/carlobolla/npmcard",
+    "imgLink": "site.png",
+    "text": "Plane Tracker",
+    "link": "https://carlobollini.com",
     "external": true
   }
 ]
