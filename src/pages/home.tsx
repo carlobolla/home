@@ -15,7 +15,7 @@ export const Home = () => {
           </div>
           <div className='col-8 col-md-8 col-lg-9 col-xl-10 justify-content-center d-flex flex-column'>
             <h1 className="display-1 gradient-text">Hello, world!</h1>
-            <h2>My name is <strong style={{ color: '#86A8E7' }}>Carlo</strong></h2>
+            <h2>My name is <strong className="gradient-text">Carlo</strong></h2>
             <p>
               I'm a fullstack developer living and working in Italy! 🇮🇹
             </p>
@@ -66,7 +66,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="container">
-          <p className='text-center text-muted'>Built with 💚 using <a href="https://vitejs.dev/" className="text-muted">Vite</a>, <a className="text-muted" href="https://reactjs.org/">React</a> and <a className="text-muted" href="https://getbootstrap.com/">Bootstrap</a> - © 2022-2024</p>
+          <p className='text-center text-muted'>Built with 💚 using <a href="https://vitejs.dev/" className="text-muted">Vite</a>, <a className="text-muted" href="https://reactjs.org/">React</a> and <a className="text-muted" href="https://getbootstrap.com/">Bootstrap</a> - © 2022-{new Date().getFullYear() }</p>
         </div>
       </div>
     </>
