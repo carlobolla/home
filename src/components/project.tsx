@@ -1,18 +1,50 @@
-import React from "react";
-import { Button } from "../components";
+import { Link as RouterLink } from "react-router-dom";
+import { Card, buttonVariants } from "@heroui/react";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { Project } from "../classes";
 
 export const ProjectCard = (props: Project) => {
-  const modalId = props.text.replace(/\s/g, "");
-  return(
-    <div className="col-12 col-md-6 justify-content-end d-flex flex-column">
-      <img style={{"width": "100%", "height": "auto"}} data-bs-toggle="modal" data-bs-target={'#' + modalId} className="project-thumb border border-2 img-fluid" src={props.imgLink} alt="Project" />
-      <Button className='align-self-center mt-3 w-75' text={props.text} link={props.link}></Button>
-      <div id={modalId} className="modal fade mt-5" tabIndex={-1}>
-        <div className="modal-dialog modal-xl">
-          <img className="border img-fluid rounded" src={props.imgLink} alt="Project" />
-        </div>
-      </div>
-    </div>
-  )
-}
+  return (
+    <Card className="overflow-hidden flex flex-col h-full">
+      <RouterLink to={`/projects/${props.slug}`}>
+        <img
+          src={props.imgLink}
+          alt={props.text}
+          className="project-thumb w-full aspect-video object-cover"
+        />
+      </RouterLink>
+      <Card.Content className="flex flex-col gap-1 flex-grow">
+        <Card.Title>{props.text}</Card.Title>
+        {props.description && <Card.Description>{props.description}</Card.Description>}
+      </Card.Content>
+      <Card.Footer className="flex flex-wrap gap-2">
+        <RouterLink
+          to={`/projects/${props.slug}`}
+          className={buttonVariants({ variant: "outline", size: "sm" }) + " flex-1"}
+        >
+          Details
+        </RouterLink>
+        {props.link && (
+          <a
+            href={props.link}
+            target={props.external ? "_blank" : undefined}
+            rel="noopener noreferrer"
+            className={buttonVariants({ variant: "primary", size: "sm" }) + " flex-1"}
+          >
+            Live <FiExternalLink />
+          </a>
+        )}
+        {props.repo && (
+          <a
+            href={`https://github.com/${props.repo}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonVariants({ variant: "primary", size: "sm" }) + " flex-1"}
+          >
+            <FiGithub /> Code
+          </a>
+        )}
+      </Card.Footer>
+    </Card>
+  );
+};

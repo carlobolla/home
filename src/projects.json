@@ -1,14 +1,18 @@
 [
   {
-    "imgLink": "anomalypredictions.png",
+    "slug": "ingress-anomaly-predictor",
+    "imgLink": "/anomalypredictions.png",
     "text": "Ingress Anomaly Score Predictor",
+    "description": "Predicts anomaly scores for the game Ingress.",
     "link": "https://anomalypredictions.crlb.dev",
-    "external": true
+    "external": true,
+    "repo": "carlobolla/ingress-anomaly-predictions"
   },
   {
-    "imgLink": "planetracker.jpg",
+    "slug": "plane-tracker",
+    "imgLink": "/planetracker.jpg",
     "text": "Plane Tracker [code coming soon]",
-    "link": "https://carlobollini.com",
-    "external": true
+    "description": "Tracks nearby flights in real time.",
+    "repo": "carlobolla/epaper-plane-tracker"
   }
 ]

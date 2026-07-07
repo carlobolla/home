@@ -1,40 +1,24 @@
-import React, { useContext, useState } from "react";
+import { CSSProperties } from "react";
 import { Contact } from "../classes";
-import { ThemeContext } from ".";
+import { contactIcons } from "./icons";
 
 export const ContactInfo = (props: Contact) => {
-  const [isHovering, setIsHovering] = useState(false);
-  const {theme} = useContext(ThemeContext);
+  const Icon = contactIcons[props.icon];
 
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
+  const style = {
+    "--pill-color": props.color,
+    "--pill-color-dark": props.colorDark ?? props.color,
+    "--pill-text-hover-dark": props.textDark ?? "#ffffff",
+  } as CSSProperties;
 
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
-
-  const getActualTheme = (theme: string): string => {
-    if(theme === 'auto')
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    return theme;
-  }
-  
-  return(
-    <a href={props.link}
-      className='btn p-1 rounded-pill justify-content-center align-items-center d-flex'
-      style={{ 
-        borderColor: (getActualTheme(theme) === 'light' ? props.color : props.colorDark),
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        color: isHovering ? (getActualTheme(theme) === 'light' ? "white" : props.textDark) : (getActualTheme(theme) === 'light' ? props.color : props.colorDark),
-        backgroundColor: isHovering ? (getActualTheme(theme) === 'light' ? props.color : props.colorDark) : '',
-        transition: 'background-color 100ms, color 100ms'
-      }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+  return (
+    <a
+      href={props.link}
+      style={style}
+      className="contact-pill flex items-center justify-center gap-2 rounded-full border px-4 py-2"
     >
-      <i className={'me-1 bi '+props.icon} style={{fontSize: '1.5em'}}></i> <div>{props.text}</div>
+      {Icon && <Icon size={20} />}
+      <span>{props.text}</span>
     </a>
-  )
-}
+  );
+};

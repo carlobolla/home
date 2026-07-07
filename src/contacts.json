@@ -1,7 +1,7 @@
 [
   {
     "link":"https://github.com/carlobolla",
-    "icon":"bi-github",
+    "icon":"github",
     "text":"Github",
     "color":"#211f1f",
     "colorDark": "#ffffff",
@@ -9,37 +9,37 @@
   },
   {
     "link":"https://it.linkedin.com/in/carlo-bollini/",
-    "icon":"bi-linkedin",
+    "icon":"linkedin",
     "text":"Linkedin",
     "color":"#0077b5"
   },
   {
     "link":"https://t.me/carlobolla",
-    "icon":"bi-telegram",
+    "icon":"telegram",
     "text":"Telegram",
     "color":"#0088cc"
   },
   {
     "link":"https://t.me/carlobollaslife",
-    "icon":"bi-telegram",
+    "icon":"telegram",
     "text":"TG Channel",
     "color":"#0088cc"
   },
   {
     "link":"https://discordapp.com/users/153883690336780288",
-    "icon":"bi-discord",
+    "icon":"discord",
     "text":"Discord",
     "color":"#7289da"
   },
   {
     "link":"https://instagram.com/carlo.bollini",
-    "icon":"bi-instagram",
+    "icon":"instagram",
     "text":"Instagram",
     "color":"#e1306c"
   },
   {
     "link":"https://bsky.app/profile/crlb.dev",
-    "icon":"bi-bluesky",
+    "icon":"bluesky",
     "text":"Bluesky",
     "color":"#55acee"
   }

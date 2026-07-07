@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './styles/index.scss'
-import 'bootstrap/dist/js/bootstrap.bundle.js'
-import 'bootstrap-icons/font/bootstrap-icons.scss'
-import { ThemeProvider, ThemeSwitcher } from './components';
-import { Home } from './pages';
+import './styles/globals.css'
+import { Home, ProjectDetail } from './pages';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,14 +10,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        <ThemeSwitcher />
-      </BrowserRouter>
-    </ThemeProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

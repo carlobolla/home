@@ -6,7 +6,7 @@
 ## Description
 This repo contains the Vite (since 19/01/2023, formerly Create React App) project for my personal website, which you can see live at [carlobollini.it](https://carlobollini.it), powered by Cloudflare Pages.
 
-It is written using React (of course), Typescript and Bootstrap for the UI.
+It is written using React (of course), Typescript, Tailwind CSS and HeroUI for the UI.
 Content is being added regularly, and i'm planning to add more and more in the near future.
 
 ### Dark theme when?

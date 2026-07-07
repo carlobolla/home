@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --accent: #7f7fd5;
+  --accent-foreground: #ffffff;
+  --focus: var(--accent);
+  --link: var(--accent);
+}
+
+.dark {
+  --accent: #86a8e7;
+  --accent-foreground: var(--eclipse);
+  --focus: var(--accent);
+  --link: var(--accent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #7f7fd5, #86a8e7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.25;
+  padding-bottom: 0.1em;
+}
+
+.typography-prose :where(h1, h2, h3, h4, h5, h6) {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.typography-prose :where(h1, h2, h3, h4, h5, h6):first-child {
+  margin-top: 0;
+}
+
+.typography-prose p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.typography-prose p:first-child {
+  margin-top: 0;
+}
+
+.project-thumb {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.project-thumb:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.contact-pill {
+  color: var(--pill-color);
+  border-color: var(--pill-color);
+  transition: background-color 100ms, color 100ms;
+}
+
+.dark .contact-pill {
+  color: var(--pill-color-dark);
+  border-color: var(--pill-color-dark);
+}
+
+.contact-pill:hover {
+  background-color: var(--pill-color);
+  color: #ffffff;
+}
+
+.dark .contact-pill:hover {
+  background-color: var(--pill-color-dark);
+  color: var(--pill-text-hover-dark);
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -30px) scale(1.1); }
+}
+
+.hero-fade {
+  mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+}
+
+.hero-blob {
+  animation: hero-float 14s ease-in-out infinite;
+}
+
+.hero-blob-delay-1 {
+  animation-delay: -4s;
+}
+
+.hero-blob-delay-2 {
+  animation-delay: -9s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob {
+    animation: none;
+  }
+}
