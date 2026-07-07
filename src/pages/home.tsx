@@ -24,7 +24,7 @@ export const Home = () => {
       </div>
       <div id="projects" className='container'>
         <div className="row">
-          <div className="col text-center">
+          <div className="col text-left text-md-center">
             <h1>My projects</h1>
             <p className="text-muted">Things I've built recently</p>
           </div>
@@ -49,13 +49,13 @@ export const Home = () => {
         </div>
         <div id="contacts" className='container'>
           <div className="row">
-            <div className="col text-center">
+            <div className="col text-left text-md-center">
               <h1>My contacts</h1>
               <p className="text-muted">Where to find me online</p>
             </div>
           </div>
           <hr />
-          <div className="row gy-3 mb-5 justify-content-center">
+          <div className="row gy-3 mb-5 justify-content-start justify-content-md-center">
             {contacts.map((c: Contact) => {
               return (
                 <div key={c.text} className="col-6 col-sm-4 col-lg-2">
