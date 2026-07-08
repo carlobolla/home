@@ -11,7 +11,7 @@
   {
     "slug": "plane-tracker",
     "imgLink": "/planetracker.jpg",
-    "text": "Plane Tracker [code coming soon]",
+    "text": "Plane Tracker",
     "description": "Tracks nearby flights in real time.",
     "repo": "carlobolla/epaper-plane-tracker"
   }
