@@ -48,6 +48,26 @@ html {
   margin-top: 0;
 }
 
+.typography-prose table {
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.typography-prose th,
+.typography-prose td {
+  border: 1px solid var(--border);
+  padding: 0.5em 0.9em;
+  text-align: left;
+}
+
+.typography-prose th {
+  font-weight: 600;
+  background-color: var(--default);
+}
+
 .project-thumb {
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
